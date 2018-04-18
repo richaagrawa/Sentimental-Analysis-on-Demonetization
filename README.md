@@ -1,6 +1,6 @@
 # Sentimental-Analysis-on-Demonetization
  Views of different people on the demonetization by analyzing the tweets from twitter is obtained.
-
+\n
 Steps to be followed:
 1..make a directory in HDFS Storage as 'pig' where all data is to be stored.
 	 hadoop fs -mkdir /pig
