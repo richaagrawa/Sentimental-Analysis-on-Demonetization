@@ -1,12 +1,14 @@
-# Sentimental-Analysis-on-Demonetization
- Views of different people on the demonetization by analyzing the tweets from twitter is obtained.
+# Sentimental-Analysis-on-Demonetization 
+Sentimental Analysis is about computationally identifying and categorizing opinions expressed in a piece of text, especially in order to determine whether the writer's attitude towards a particular topic, product, etc. is positive, negative, or neutral.
+<br />
+Views of different people on the demonetization by analyzing the tweets from twitter is obtained.
  
  
-Steps to be followed:
+## Steps to be followed:
 
 1.Make a directory in HDFS Storage as 'pig' where all data is to be stored.
 	 
-	 hadoop fs -mkdir /pig
+	hadoop fs -mkdir /pig
 
 2.Load Demonetization-tweets.csv file into HDFS Storage.
 	
@@ -16,10 +18,9 @@ Steps to be followed:
 	
 	pig
 
-Execute all the following command on grunt shell:	 
+## Execute all the following command on grunt shell:	 
 
 4.Load the data into pig using PigStorage and see the tweets loaded by executing following command:
-
 
 	run /home/richa/Desktop/load_tweets.pig
 
@@ -29,14 +30,14 @@ Execute all the following command on grunt shell:
    
    	run /home/richa/Desktop/details_token.pig
 	
-	
-6.To analyse the Sentiment for the tweet by using the words in the text. We will rate the word as per its meaning from +5 to -5 using the dictionary AFINN. The AFINN is a dictionary which consists of 2500 words which are rated from +5 to -5 depending on their meaning.load AFINN Dictionary into HDFS Storage by following command:
+6.To analyse the Sentiment for the tweet by using the words in the text. We will rate the word as per its meaning from +5 to -5 using the dictionary AFINN. The AFINN is a dictionary which consists of 2500 words which are rated from +5 to -5 depending on their meaning.
+## load AFINN Dictionary into HDFS Storage by following command:
 	
 	hadoop fs -put /home/richa/Desktop/AFINN.txt /pig
 
 7.Load the dictionary into pig by using the below statement:
 
-		run /home/richa/Desktop/AFINN.pig
+	run /home/richa/Desktop/AFINN.pig
 
 8.filter the tweets as by running script.pig: 
 	
